@@ -1,0 +1,18 @@
+---
+project_id: "your-GCP-Project-ID"
+location: "us-central1"
+service_account_key: "your-service-account-json-key-path"
+storageSource:
+  bucket_name: "funix_unix_bucket"
+  object_name: "function.zip"
+buildConfig:
+  build_name: "demo-function-build"
+  runtime: "python310"
+  entry_point: "hello"
+serviceConfig:
+  service_name: "demo-function-service"
+  timeout_seconds: 60
+  available_memory: "128Mi"
+function:
+  function_name: "demo-function"
+  environment: 2
